@@ -1,4 +1,16 @@
-<div class="form-box">
+			<div class="form-box">
+				<h4>报告类型</h4>
+				
+				<div class="radio">
+			        <label>
+			        	<input type="radio" name="reportType" ng-model="reportType" id="" value="111" checked="checked">行业报告
+			        </label>&nbsp;&nbsp;
+			        <label>
+			        	<input type="radio" name="reportType" ng-model="reportType" id="" value="112" >市场报告
+			        </label>
+			    </div>
+			</div>
+			<div class="form-box">
 				<h4>邮件系统设置</h4>
 				<div class="radio">
 			        <label>
@@ -48,15 +60,7 @@
 				<div class="form-group">
 					<input type="text" class="form-control" ng-model="moreLink" id="" placeholder="输入更多链接地址">
 				</div>
-				<div class="radio">
-					报告类型&nbsp;&nbsp;
-			        <label>
-			        	<input type="radio" name="reportType" ng-model="reportType" id="" value="111" checked="checked">111
-			        </label>&nbsp;&nbsp;
-			        <label>
-			        	<input type="radio" name="reportType" ng-model="reportType" id="" value="112" >112
-			        </label>
-			    </div>
+				
 				<div class="form-group form-inline">
 					<div class="form-group">
 						<input type="text" class="form-control" ng-model="reportID1" id="" placeholder="输入报告ID1">
@@ -99,16 +103,8 @@
 				</div>
 			</div>
 			
-			<div class="form-box">
-				<div class="checkbox">
-		        	<label>
-		          		<input name="relatedMore" ng-model="relatedMore" value="" type="checkbox"> 是否相关细分报告
-		        	</label>
-		      	</div>
-				
-			</div>
 
-			<div ng-if="relatedMore !== false"  class="form-box">
+			<div ng-show="reportType === '111' " class="form-box">
 				<h4>相关细分报告设置</h4>
 				<div class="form-group">
 					<input type="text" class="form-control" ng-model="relatedMoreLink" id="" placeholder="输入更多相关链接地址">

@@ -61,7 +61,22 @@
 														</a>
 													</td>
 												</tr>
-												<tr>
+												<tr ng-show="reportType === '111' " >
+													<td style="padding-bottom:20px;">
+														<table border="0" cellpadding="0" cellspacing="0">
+															<tbody>
+																<tr>
+																	<td style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222; text-align:left;">行业报告</td>
+																	<td style="padding:0 10px;line-height:20px;font-family:'微软雅黑'; font-size:16px; color:#ebebeb ; text-align:left;">|</td>
+																	<td style="line-height:20px;font-family:'微软雅黑'; font-size:12px; text-align:left;">
+																		<a href="{{moreLink}}" style="line-height:20px;font-family:'微软雅黑'; font-size:12px; color:#246bb3; text-align:left;text-decoration: none;">更多&gt;&gt;</a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr ng-show="reportType === '112' " >
 													<td style="padding-bottom:20px;">
 														<table border="0" cellpadding="0" cellspacing="0">
 															<tbody>
@@ -119,7 +134,7 @@
 													</td>
 												</tr>
 
-												<tr ng-if="relatedMore !== false">
+												<tr ng-show="reportType === '111' " >
 													<td style="padding:40px 0 20px;">
 														<table border="0" cellpadding="0" cellspacing="0">
 															<tbody>
@@ -135,7 +150,7 @@
 														</table>
 													</td>
 												</tr>
-												<tr ng-if="relatedMore !== false">
+												<tr ng-show="reportType === '111' " >
 													<td>
 														<table border="0" cellpadding="0" cellspacing="0" width="100%">
 															<tbody>
