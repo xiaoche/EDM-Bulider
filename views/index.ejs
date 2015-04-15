@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap/bootstrap.min.css">
+	<script src="/javascripts/angular/angular.min.js"></script>
+	<script src="/javascripts/jquery/jquery.min.js"></script>
+	<script src="/javascripts/bootstrap/bootstrap.min.js"></script>
+	<script src="/javascripts/jquery.zclip/jquery.zclip.min.js"></script>
+
+	<!--
+	<link rel="stylesheet" type="text/css" href="/javascripts/simditor-2.1.5/styles/simditor.css" />
+
+	<script type="text/javascript" src="/javascripts/simditor-2.1.5/scripts/module.js"></script>
+	<script type="text/javascript" src="/javascripts/simditor-2.1.5/scripts/hotkeys.js"></script>
+	<script type="text/javascript" src="/javascripts/simditor-2.1.5/scripts/simditor.js"></script>
+	-->
+	<link rel="stylesheet" type="text/css" href="/javascripts/simditor/simditor.css" />
+	<script type="text/javascript" src="/javascripts/simditor/simditor-all.js"></script>
+  	<script type="text/javascript" src="/javascripts/simditor/angular-editor.js"></script>
+</head>
+<body>
+</div>
+
+	<div class="edm-box" style="width:750px; float:left ">
+		<p style="padding-bottom: 0px; line-height: 0; margin: 0px; padding-left: 0px; padding-right: 0px; height: 0px; overflow: hidden; padding-top: 0px">
+		<style type="text/css">
+    		a {color:#246bb3;text-decoration:none;}
+    		a:hover {color:#ff6600;text-decoration:underline;} 
+    		body {margin:0; padding:0;}
+  		</style>
+		</p>
+		<table border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tbody>
+				<% include common-cn/top %>
+				<tr>
+					<td style="background:#ebebeb; ">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" width="700">
+							<tbody>
+								<% include common-cn/header %>
+								<tr>
+									<td style="border-bottom:0 none;">
+										<img alt="{{systemTitle}}" title="{{systemTitle}}" border="0" height="{{bannerHeight || 250}}" src="{{bannerSrc || 'http://design.vemic.com:2222/700x250'}}" width="{{bannerWidth || 700}}" />
+									</td>
+								</tr>
+								<tr>
+									<td style="padding:20px 40px 40px 40px; background:#fff;">
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<tbody>
+												<tr>
+													<td style="line-height:24px;font-family:'微软雅黑'; font-size:14px; color:#222; text-align:left;">{{descText || '行业报告描述行业报告描述行业报告描述行业报告描述行业报告描述行业报告描述行业报告描述行业报告描述'}}</td>
+												</tr>
+
+												<tr ng-if="descText2 !== ''">
+													<td style="line-height:24px; padding-top:10px; font-family:'微软雅黑'; font-size:14px; color:#222; text-align:left;">{{descText2}}</td>
+												</tr>
+												<tr>
+													<td align="center" style="padding:40px;">
+														<a href="{{downloadLink}}">
+															<img alt="免费下载" title="免费下载" src="http://edm.focuschina.com:80/MICEN/2015/3/btn-freedown.png" />
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding-bottom:20px;">
+														<table border="0" cellpadding="0" cellspacing="0">
+															<tbody>
+																<tr>
+																	<td style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222; text-align:left;">市场报告</td>
+																	<td style="padding:0 10px;line-height:20px;font-family:'微软雅黑'; font-size:16px; color:#ebebeb ; text-align:left;">|</td>
+																	<td style="line-height:20px;font-family:'微软雅黑'; font-size:12px; text-align:left;">
+																		<a href="{{moreLink}}" style="line-height:20px;font-family:'微软雅黑'; font-size:12px; color:#246bb3; text-align:left;text-decoration: none;">更多&gt;&gt;</a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<td style="padding:0 15px 0 0;" width="109">
+																		<img alt="{{reportTitle1}}" border="0" height="134" src="http://service.made-in-china.com/actives/guide/{{reportType || '111'}}/{{reportID1}}/guide.jpg" width="100" />
+																	</td>
+																	<td style="padding:0 15px;" width="109">
+																		<img alt="{{reportTitle2}}" border="0" height="134" src="http://service.made-in-china.com/actives/guide/{{reportType || '111'}}/{{reportID2}}/guide.jpg" width="100" />
+																	</td>
+																	<td style="padding:0 15px;" width="109">
+																		<img alt="{{reportTitle3}}" border="0" height="134" src="http://service.made-in-china.com/actives/guide/{{reportType || '111'}}/{{reportID3}}/guide.jpg" width="100" />
+																	</td>
+																	<td style="padding:0 15px; " width="109">
+																		<img alt="{{reportTitle4}}" border="0" height="134" src="http://service.made-in-china.com/actives/guide/{{reportType || '111'}}/{{reportID4}}/guide.jpg" width="100" />
+																	</td>
+																	<td style="padding:0 0 0 15px;" width="109">
+																		<img alt="{{reportTitle5}}" border="0" height="134" src="http://service.made-in-china.com/actives/guide/{{reportType || '111'}}/{{reportID5}}/guide.jpg" width="100" />
+																	</td>
+																</tr>
+																<tr>
+																	<td style="line-height: 20px; font-size: 12px; font-family:'微软雅黑'; padding:5px 15px 0 0;" valign="top">
+																		<a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/{{reportID1}}.html" style="color:#246bb3; text-decoration:none;">{{reportTitle1 || '行业报告标题'}}</a>
+																	</td>
+																	<td style="line-height: 20px; font-size: 12px; font-family:'微软雅黑'; padding:5px 15px 0" valign="top">
+																		<a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/{{reportID2}}.html" style="color:#246bb3; text-decoration:none;">{{reportTitle2 || '行业报告标题'}}</a>
+																	</td>
+																	<td style="line-height: 20px; font-size: 12px; font-family:'微软雅黑'; padding:5px 15px 0" valign="top">
+																		<a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/{{reportID3}}.html" style="color:#246bb3; text-decoration:none;">{{reportTitle3 || '行业报告标题'}}</a>
+																	</td>
+																	<td style="line-height: 20px; font-size: 12px;font-family:'微软雅黑'; padding:5px 15px 0" valign="top">
+																		<a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/{{reportID4}}.html" style="color:#246bb3; text-decoration:none;">{{reportTitle4 || '行业报告标题'}}</a>
+																	</td>
+																	<td style="line-height: 20px; font-size: 12px;font-family:'微软雅黑'; padding:5px 0 0 15px" valign="top">
+																		<a href="http://service.made-in-china.com/market-analysis/industry-analysis-report/{{reportID5}}.html" style="color:#246bb3; text-decoration:none;">{{reportTitle5 || '行业报告标题'}}</a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+
+												<tr ng-if="relatedMore !== false">
+													<td style="padding:40px 0 20px;">
+														<table border="0" cellpadding="0" cellspacing="0">
+															<tbody>
+																<tr>
+																	<td style="line-height:24px;font-family:'微软雅黑'; font-size:16px; font-weight: bolder; color:#222; text-align:left;">
+																		相关细分报告</td>
+																	<td style="padding:0 10px;line-height:20px;font-family:'微软雅黑'; font-size:16px; color:#ebebeb ; text-align:left;">
+																		|</td>
+																	<td style="line-height:20px;font-family:'微软雅黑'; font-size:12px; text-align:left;">
+																		<a href="{{relatedMoreLink}}" style="line-height:20px;font-family:'微软雅黑'; font-size:12px; color:#246bb3; text-align:left;text-decoration: none;">更多&gt;&gt;</a></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+												<tr ng-if="relatedMore !== false">
+													<td>
+														<table border="0" cellpadding="0" cellspacing="0" width="100%">
+															<tbody>
+																<tr>
+																	<td style="padding-bottom:5px;">
+																		<span style="color:#999;">·</span><a href="http://service.made-in-china.com/market-analysis/subsector-analysis/{{relatedReportID1}}.html" style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;"> {{relatedReportTitle1 || '相关细分报告标题'}}</a></td>
+																	<td style="padding-bottom:5px;">
+																		<span style="color:#999;">·</span><a href="http://service.made-in-china.com/market-analysis/subsector-analysis/{{relatedReportID2}}.html" style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;"> {{relatedReportTitle2 || '相关细分报告标题'}}</a></td>
+																</tr>
+																<tr>
+																	<td style="padding-bottom:5px;">
+																		<span style="color:#999;">·</span><a href="http://service.made-in-china.com/market-analysis/subsector-analysis/{{relatedReportID3}}.html" style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;"> {{relatedReportTitle3 || '相关细分报告标题'}}</a></td>
+																	<td style="padding-bottom:5px;">
+																		<span style="color:#999;">·</span><a href="http://service.made-in-china.com/market-analysis/subsector-analysis/{{relatedReportID4}}.html" style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;"> {{relatedReportTitle4 || '相关细分报告标题'}}</a></td>
+																</tr>
+																<tr>
+																	<td style="padding-bottom:5px;">
+																		<span style="color:#999;">·</span><a href="http://service.made-in-china.com/market-analysis/subsector-analysis/{{relatedReportID5}}.html" style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;"> {{relatedReportTitle5 || '相关细分报告标题'}}</a></td>
+																	<td style="padding-bottom:5px;">
+																		<span style="color:#999;">·</span><a href="http://service.made-in-china.com/market-analysis/subsector-analysis/{{relatedReportID6}}.html" style=" font-family:'微软雅黑'; font-size:14px; line-height:24px; color:#246bb3;text-decoration:none;"> {{relatedReportTitle6 || '相关细分报告标题'}}</a></td>
+																</tr>
+															</tbody>
+														</table>
+													</td>
+												</tr>
+
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<% include common-cn/iar-contact %>
+								<% include common-cn/backoff %>
+								<% include common-cn/links %>
+								<% include common-cn/copy %>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+	<style>
+	.form-box{
+		border:1px solid #ccc;
+		border-radius: 5px;
+		padding:10px;
+		margin: 10px 0;
+	}
+	</style>
+	<div style="width:400px; float:left; margin-left:20px;">
+		<div class="">
+			<% include control %>
+			
+		</div>
+
+		<div style="padding-bottom:50px;">
+			
+
+			<script type="text/javascript">
+
+				
+			    $(document).ready(function(){
+			    	// var edmTitle = $(".edmTitle").val();
+					$('#btn-copy').zclip({
+						path:'/javascripts/jquery.zclip/ZeroClipboard.swf',
+						copy:function(){
+							var edmTitle = $(".edmTitle").val();
+							return '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><title>'+ edmTitle +'</title></head><body bgcolor="#fff" leftmargin="0" marginheight="0" marginwidth="0" style="margin: 0px; background: #fff" topmargin="0">' + $( ".edm-box" ).html()+"</body></html>";
+						}
+					});
+				});
+
+
+			</script> 
+			<button class="btn btn-larger btn-danger" id="btn-copy">一键复制代码</button>
+		</div>
+
+	</div>
+
+</body>
+</html>

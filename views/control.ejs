@@ -1,0 +1,173 @@
+<div class="form-box">
+				<h4>邮件系统设置</h4>
+				<div class="radio">
+			        <label>
+			        	<input type="radio" name="memberType" ng-model="memberType" id="" value="2a" checked="checked">2A
+			        </label>&nbsp;&nbsp;
+			        <label>
+			        	<input type="radio" name="memberType" ng-model="memberType" id="" value="2b" >2B
+			        </label>
+			    </div>
+				<div class="form-group">
+					<input type="text" class="form-control edmTitle" ng-model="systemTitle" id="" placeholder="输入邮件标题"></div>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="webUrl" id="" placeholder="输入邮件URL,只需输入年月，如2015/04/2886.htm"></div>
+			</div>
+
+			<div class="form-box">
+				<h4>Banner设置</h4>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="bannerSrc" id="" placeholder="输入Banner Url">
+				</div>
+				<div class="form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="bannerWidth" id="" placeholder="输入Banner宽度">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="bannerHeight" id="" placeholder="输入Banner高度">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-box">
+				<h4>文字描述</h4>
+				<div class="JS_descGrop form-group">
+					<textarea class="form-control" rows="3" ng-model="descText" id="descText" placeholder="输入文字描述"></textarea>
+				</div>
+				<div class="JS_descGrop form-group">
+					<textarea class="form-control" rows="3" ng-model="descText2" id="descText" placeholder="输入文字描述2"></textarea>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="downloadLink" id="" placeholder="输入下载链接">
+				</div>
+				
+			</div>
+
+			<div class="form-box">
+				<h4>更多报告设置</h4>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="moreLink" id="" placeholder="输入更多链接地址">
+				</div>
+				<div class="radio">
+					报告类型&nbsp;&nbsp;
+			        <label>
+			        	<input type="radio" name="reportType" ng-model="reportType" id="" value="111" checked="checked">111
+			        </label>&nbsp;&nbsp;
+			        <label>
+			        	<input type="radio" name="reportType" ng-model="reportType" id="" value="112" >112
+			        </label>
+			    </div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportID1" id="" placeholder="输入报告ID1">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportTitle1" id="" placeholder="输入报告标题1">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportID2" id="" placeholder="输入报告ID2">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportTitle2" id="" placeholder="输入报告标题2">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportID3" id="" placeholder="输入报告ID3">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportTitle3" id="" placeholder="输入报告标题3">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportID4" id="" placeholder="输入报告ID4">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportTitle4" id="" placeholder="输入报告标题4">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportID5" id="" placeholder="输入报告ID5">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="reportTitle5" id="" placeholder="输入报告标题5">
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-box">
+				<div class="checkbox">
+		        	<label>
+		          		<input name="relatedMore" ng-model="relatedMore" value="" type="checkbox"> 是否相关细分报告
+		        	</label>
+		      	</div>
+				
+			</div>
+
+			<div ng-if="relatedMore !== false"  class="form-box">
+				<h4>相关细分报告设置</h4>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="relatedMoreLink" id="" placeholder="输入更多相关链接地址">
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportID1" id="" placeholder="输入相关报告ID1">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportTitle1" id="" placeholder="输入相关报告标题1">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportID2" id="" placeholder="输入相关报告ID2">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportTitle2" id="" placeholder="输入相关报告标题2">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportID3" id="" placeholder="输入相关报告ID3">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportTitle3" id="" placeholder="输入相关报告标题3">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportID4" id="" placeholder="输入相关报告ID4">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportTitle4" id="" placeholder="输入相关报告标题4">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportID5" id="" placeholder="输入相关报告ID5">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportTitle5" id="" placeholder="输入相关报告标题5">
+					</div>
+				</div>
+				<div class="form-group form-inline">
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportID6" id="" placeholder="输入相关报告ID5">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" ng-model="relatedReportTitle6" id="" placeholder="输入相关报告标题5">
+					</div>
+				</div>
+			</div>
+
+			<div class="form-box">
+				<div class="checkbox">
+		        	<label>
+		          		<input name="Webmail" ng-model="Webmail"  type="checkbox" checked> 是否网页版
+		        	</label>
+		      	</div>
+			</div>
+
