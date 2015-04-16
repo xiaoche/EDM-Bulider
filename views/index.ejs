@@ -8,13 +8,6 @@
 	<script src="/javascripts/bootstrap/bootstrap.min.js"></script>
 	<script src="/javascripts/jquery.zclip/jquery.zclip.min.js"></script>
 
-	<!--
-	<link rel="stylesheet" type="text/css" href="/javascripts/simditor-2.1.5/styles/simditor.css" />
-
-	<script type="text/javascript" src="/javascripts/simditor-2.1.5/scripts/module.js"></script>
-	<script type="text/javascript" src="/javascripts/simditor-2.1.5/scripts/hotkeys.js"></script>
-	<script type="text/javascript" src="/javascripts/simditor-2.1.5/scripts/simditor.js"></script>
-	-->
 	<link rel="stylesheet" type="text/css" href="/javascripts/simditor/simditor.css" />
 	<script type="text/javascript" src="/javascripts/simditor/simditor-all.js"></script>
   	<script type="text/javascript" src="/javascripts/simditor/angular-editor.js"></script>
@@ -40,7 +33,7 @@
 								<% include common-cn/header %>
 								<tr>
 									<td style="border-bottom:0 none;">
-										<img alt="{{systemTitle}}" title="{{systemTitle}}" border="0" height="{{bannerHeight || 250}}" src="{{bannerSrc || 'http://design.vemic.com:2222/700x250'}}" width="{{bannerWidth || 700}}" />
+										<img alt="{{systemTitle}}" title="{{systemTitle}}" border="0" height="{{bannerHeight || 520}}" src="{{bannerSrc || 'http://design.vemic.com:2222/700x520'}}" width="{{bannerWidth || 700}}" />
 									</td>
 								</tr>
 								<tr>
@@ -185,6 +178,7 @@
 								<% include common-cn/backoff %>
 								<% include common-cn/links %>
 								<% include common-cn/copy %>
+
 							</tbody>
 						</table>
 					</td>
@@ -216,11 +210,15 @@
 				
 			    $(document).ready(function(){
 			    	// var edmTitle = $(".edmTitle").val();
+			    	// var edmHtml = $( ".edm-box" ).clone().find(".ng-hide").remove().end().html();
+			    	// console.log(edmHtml);
 					$('#btn-copy').zclip({
 						path:'/javascripts/jquery.zclip/ZeroClipboard.swf',
 						copy:function(){
 							var edmTitle = $(".edmTitle").val();
-							return '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><title>'+ edmTitle +'</title></head><body bgcolor="#fff" leftmargin="0" marginheight="0" marginwidth="0" style="margin: 0px; background: #fff" topmargin="0">' + $( ".edm-box" ).html()+"</body></html>";
+							var edmHtml = $( ".edm-box" ).clone().find(".ng-hide").remove().end().html();
+							
+							return '<html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><title>'+ edmTitle +'</title></head><body bgcolor="#fff" leftmargin="0" marginheight="0" marginwidth="0" style="margin: 0px; background: #fff" topmargin="0">' + edmHtml +"</body></html>";
 						}
 					});
 				});
